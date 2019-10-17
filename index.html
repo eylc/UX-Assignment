@@ -1,14 +1,57 @@
 <html>
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Titillium+Web&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        testing!
+    <div class="container-fluid">
+            
+        <div class="row align-items-center">
+                
+            <div class="col align-self-start">
+                    
+                <img class="logo" src="images/logo.png">                
+                
+                <div class="intro">
+                    <h5>Welcome to</h5>
+                    <h2>AVR PLATFORM</h2>
+                </div>
+                <form class="formSection">
+                    <div class="form-group">
+                        <label for="email_Input" class="email_label">
+                            <h5>Email</h5>
+                        </label>
+                        <br>
+                        <input type="email" class="form_control" required="" id="email_Input" placeholder="youremail@email.com">
+                        <span class="focus-hl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pw_Input">
+                            <h5>Password</h5>
+                        </label>
+                        <br>
+                        <input type="password" class="form_control" required="" id="pw_Input" placeholder="password">
+                        <span class="focus-hl"></span>
+                        <h6 class="forget_pw"><a href="#"><u>Forget password?</u></a></h6>
+                    </div>
+                    <div class="signIn">
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </div>
+                </form>
+                <div class="end">
+                    <h6>Not a member? <a href="#"><u>Start for Free</u></a></h6>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row col-10"> -->
+                <img class="img-fluid" src="images/illustration.png">
+            <!-- </div> -->
     </div>
 
 
