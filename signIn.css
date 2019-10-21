@@ -1,0 +1,334 @@
+html {
+    font-family: 'Titillium Web', sans-serif;
+    color: rgb(216, 216, 216);
+}
+
+h2 {
+    font-size: 180%;
+    font-family: 'Noto Serif', serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+h5 {
+    color: #1C3763;
+    font-weight: 600;
+    font-size: 110%;
+}
+h6 {
+    color: rgb(216, 216, 216);
+    font-weight: 600;
+    font-size: 85%;
+}
+h6 a{
+    color: rgb(255, 255, 255);
+}
+a:hover {
+    color: rgb(109, 144, 196);
+}
+
+body{
+    background: linear-gradient(-90deg,#1C3763, #BB3B56);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container-fluid {
+    width: 100%;
+    height: 100%;
+    border: 1px solid darkblue;
+}
+.contents {
+    height: 100vh;
+}
+.col {
+    height: 100%;
+    width: 100%;
+}
+.signInAlignBox {
+    align-items: center ;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+.signInContentBox {
+    padding: 0 0 0 15em;
+    transition: 0.2s ease-in-out;
+}
+.illustAlignBox {
+    align-items: flex-start;
+    justify-content:  flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+/* .w-100 {    
+    border: 1px solid fuchsia;
+    height: 0%;
+} dividers */
+
+                                            /*--  CONTENT START --*/
+.logo {
+    width: 6em;
+}
+
+
+/* INTRO TEXTS start */
+.intro {
+    padding: 8em 0 2em 0;
+    transition: 0.3s;
+}
+.intro h5 {
+    margin-bottom: -0.2em;
+}
+/* INTRO TEXTS end */
+
+
+/* SIGN IN FORM start */
+.formSection {
+    padding: 2em 0;
+}
+.form-group { 
+    padding: 0 0 1em 0;
+}   /* seperation gap for input boxes */
+.form_control{
+    position: relative;
+    width: 400px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    font-size: 110%;
+    padding: 7px 0;
+    transition: 0.2s ease-in-out;
+}
+.inputEffectBox {
+    position: relative;
+}
+.inputEffectBox label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #1C3763;
+    font-weight: 600;
+    font-size: 110%;
+    transition: .3s ease-in;
+}
+
+.form_control~ .focus-hl {
+    position: absolute;
+    bottom: -0.5;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255) ;
+    transition: 0.4s;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,0.3));
+}
+.form_control:focus ~ .focus-hl {
+    width: 400px;
+    transition: 0.4s;
+    left: 0;
+}
+.form_control:focus ~ label,
+.form_control:valid ~ label {
+    bottom: 25px;
+    left: 0;
+    color: rgb(255, 255, 255);
+    font-size: 90%;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,0.3));
+}
+
+.forget_pw {
+    padding: 2em 0 0;
+    font-weight: normal;
+}
+.btn {
+    width: 250px;
+    height: 40px;
+    background-color: #1C3763;
+    border: none;
+    font-weight: 700;
+    font-size: 100%;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+.signInBtn {
+    padding: 1em 0 3em;
+}
+/* SIGN IN FORM end */
+
+
+/* ILLUSTRATION start */
+.illust {
+    position: absolute;
+    z-index: -1;
+}
+.img-fluid {
+    position: absolute;
+    height: 100vh;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+}
+/* ILLUSTRATION end */
+
+                                                /*--  CONTENT END --*/
+
+
+
+                                                /*--  RESPONSIVE START --*/
+@media screen and (max-width: 1366px) {
+    .img-fluid{
+        /* transform: translateX(5em); */
+        opacity: 0.9;
+        transition: 0.3s ease-in-out;
+    }
+}
+@media screen and (max-width: 1280px) {
+    
+    .signInContentBox {
+        padding: 0 0 0 13em;    
+    }
+    .img-fluid{
+        /* transform: translateX(6em); */
+        opacity: 0.8;
+        transition: 0.3s ease-in-out;
+    }
+    .form_control{
+        width: 325px;
+    }
+    .form_control:focus ~ .focus-hl {
+        width: 325px;
+    }
+    .btn {
+        width: 220px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    
+    .signInContentBox {
+        padding: 0 0 0 11em;    
+    }
+    .img-fluid{
+        /* transform: translateX(5em); */
+        opacity: 0.6;
+        transition: 0.3s ease-in-out;
+    }
+    .form_control{
+        width: 300px;
+    }
+    .form_control:focus ~ .focus-hl {
+        width: 300px;
+    }
+    .btn {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 160%;
+      }
+    h5 {
+        font-size: 100%;
+    }
+    h6 {
+        font-size: 80%;
+    }
+    .intro {
+        padding: 6em 0 1em 0;
+    }
+
+    .signInContentBox {
+        padding: 0 0 0 8em;    
+    }
+    .img-fluid{
+        
+        opacity: 0.4;
+        transition: 0.3s ease-in-out;
+    }
+    .formSection {
+        padding: 1em 0;
+    }
+    .form_control{
+        width: 280px;
+        font-size: 100%;
+    }
+    .inputEffectBox label {
+        font-size: 100%;
+    }
+    .form_control:focus ~ .focus-hl {
+        width: 280px;
+    }
+    .form_control:focus ~ label,
+    .form_control:valid ~ label {
+        font-size: 80%;
+    }
+    .btn {
+        width: 180px;
+        height: 35px;
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 576px) {
+    h2 {
+        font-size: 120%;
+      }
+    h5 {
+        font-size: 90%;
+    }
+    h6 {
+        font-size: 70%;
+    }
+    .intro {
+        padding: 4em 0 0 0;
+    }.formSection {
+        padding: 2em 0;
+    }
+    .logo {
+        width: 4em;   
+    }
+    .signInContentBox {
+        padding: 0 0 0 4em;    
+    }
+    .img-fluid{
+        opacity: 0.4;
+        /* object-position: -130vw; */
+        transition: 0.3s ease-in-out;
+    }
+    .formSection {
+        padding: 2em 0;
+    }
+    /* seperation gap for input boxes */
+    .form-group { 
+        padding: 0;
+    } 
+    .form_control{
+        width: 200px;
+        font-size: 90%;
+    }
+    .inputEffectBox label {
+        font-size: 90%;
+    }
+    .form_control:focus ~ .focus-hl {
+        width: 200px;
+    }
+    .form_control:focus ~ label,
+    .form_control:valid ~ label {
+        bottom: 20px;
+        font-size: 80%;
+    }
+    .btn {
+        width: 120px;
+        height: 30px;
+        font-size: 80%;
+    }
+    .signInBtn {
+        padding: 2em 0 1em;
+    }
+}
+@media screen and (max-width: 350px) {
+    .signInContentBox {
+            padding: 0 0 0 3em;    
+        }
+}
+                                                /*--  RESPONSIVE END --*/
